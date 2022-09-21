@@ -15,8 +15,13 @@ app.get('/', (req, res) => {
 
 // Check for updates every 5 minutesd
 // setInterval(() => {
-//     checkForUpdates();
+//     notion.checkForUpdates();
 // }, 300000);
+
+// Check for updates every 2 minutes
+setInterval(() => {
+    notion.checkForUpdates();
+}, 120000);
 
 // Check for updates every 10 seconds
 // setInterval(() => {
@@ -24,9 +29,9 @@ app.get('/', (req, res) => {
 // }, 10000);
 
 // Check for updates every 5 seconds
-setInterval(() => {
-    notion.checkForUpdates();
-}, 5000);
+// setInterval(() => {
+//     notion.checkForUpdates();
+// }, 5000);
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
 
